@@ -1,0 +1,182 @@
+@import './color.css';
+
+
+footer{
+    background: var( --blackBlue);
+    padding:4rem 2rem ;
+}
+
+footer .container .top{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+
+footer .container .top h3{
+    color:var(--yellow);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* bx 1 */
+footer .container .top .footer_bx ul li a{
+    color: white;
+    display: block;
+    margin-bottom: 1rem;
+    transition: all .2s ease;
+}
+footer .container .top .footer_bx ul li a:hover{
+    color: var(--yellow);
+    padding-left: .5rem;
+}
+
+/* bx 2 */
+footer .container .top .footer_bx .addressBx{
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    color: white;
+}
+
+footer .container .top .footer_bx .addressBx i{font-size: 2rem;}
+
+footer .container .top .footer_bx .social_mediaBx{
+    display: flex;
+    gap: .5rem;
+    color: white;
+}
+footer .container .top .footer_bx .social_mediaBx i{
+    font-size: 1.8rem;
+    border: 1px solid var(--white);
+    padding: .8rem;
+    border-radius: 50%;
+    transition: all .2s ease;
+}
+
+footer .container .top .footer_bx .social_mediaBx i:hover{
+ background: var(--white);
+ color: var(--yellow);   
+ cursor: pointer;
+}
+
+/*  bx 3 */
+footer .container .top .footer_bx .timeOpen{
+    margin-bottom: 2rem;
+    color: white;
+}
+footer .container .top .footer_bx .timeOpen p.week{
+    margin-bottom: .5rem;
+    font-size: 2rem;
+}
+footer .container .top .footer_bx .timeOpen p{
+    font-size: 1.6rem;
+}
+
+/*  bx 4 */
+footer .container .top .footer_bx.b4{
+  color: var(--white);
+  font-size: 1.6rem;
+}
+
+footer .container .top .footer_bx.b4 .footerInputBx{
+    position: relative;
+    margin-top: 2rem;
+}
+
+
+footer .container .top .footer_bx.b4 .footerInputBx input{
+    width: 100%;
+    border: 1px solid var(--yellow);
+    padding: 2rem 11rem 2rem 2rem;
+    font-size: 1.7rem;
+    border-radius: 5px;
+}
+
+footer .container .top .footer_bx.b4 .footerInputBx button{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  outline: none;
+  background: var(--yellow);
+  border: 1px solid var(--yellow);
+  padding: 1rem 2rem;
+  display: inline-block;
+  color: white;
+  transition:all .2s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+footer .container .top .footer_bx.b4 .footerInputBx input:focus{
+    outline: none;
+}
+
+
+/* footer down box */
+footer .container .down{
+    padding: 2rem 0;
+    border-top: 1px solid rgba(85, 85, 85,0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+footer .container .down .left{
+    color: var(--white);
+}
+
+footer .container .down .left p{
+    font-size: 1.5rem;
+}
+footer .container .down .left p:first-child{
+    margin-bottom: 1rem;
+}
+
+footer .container .down .left p a{color: var(--yellow);}
+
+footer .container .down .right ul{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+color: white;
+}
+
+footer .container .down .right ul li{
+    padding: 0 2rem;    
+    border-right: 1px solid rgba(85, 85, 85,0.7);
+}
+footer .container .down .right ul li:nth-child(4){border: none;}
+
+
+
+
+/* ------------ MEDIA QUERY RESPONSIVE ------------------ */
+@media screen and (max-width:991px){
+    footer .container .top{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media screen and (max-width:576px){
+    footer .container .top{
+        grid-template-columns:1fr;
+    }
+    footer .container .down{
+        padding: 2rem 0;
+        border-top: 1px solid rgba(85, 85, 85,0.7);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    footer .container .down .right ul li{
+        padding: 0 2rem;    
+        border-right: 1px solid rgba(85, 85, 85,0.7);
+    }
+    footer .container .down .right ul li:nth-child(4){border: none;}
+}
+

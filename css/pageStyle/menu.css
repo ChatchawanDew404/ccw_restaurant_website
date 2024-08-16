@@ -1,0 +1,408 @@
+.sectionBanner{
+    width: 100%;
+    height: 60dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+    background: url('/image/aboutImg1_3.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    text-align: center;
+}
+
+.sectionBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 23, 43,0.85);
+    z-index: -1;
+}
+
+.sectionBanner .content h2{
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.sectionBanner .content p{
+    text-align: center;
+    color: white;
+}
+.sectionBanner .content p span{
+    padding: .5rem;
+}
+.sectionBanner .content p span:nth-child(1),
+.sectionBanner .content p span:nth-child(3){
+    color: var(--yellow);
+}
+.sectionBanner .content p span:nth-child(2),
+.sectionBanner .content p span:nth-child(4){
+    color: #8d8c8c;
+}
+
+
+/* ------------- MENU SECTION ---------*/
+.menu .container .controlDisplayMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+}
+/*-- left box */
+.menu .container .controlDisplayMenu .leftBox{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.menu .container .controlDisplayMenu .leftBox .categoryBox select,
+.menu .container .controlDisplayMenu .leftBox .rateBox select{
+    width: 100%;
+    padding: 1rem;
+    min-width: 15rem;
+    font-size: 1.6rem;
+}
+.menu .container .controlDisplayMenu .leftBox .categoryBox select:focus,
+.menu .container .controlDisplayMenu .leftBox .rateBox select:focus{
+    border: 1px solid var(--yellow);
+}
+.menu .container .controlDisplayMenu .leftBox .rateBox select option{
+   border-radius: none !important;
+}
+/*-- right box */
+.menu .container .controlDisplayMenu .rightBox .inputBx{
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all .2s ease;
+}
+.menu .container .controlDisplayMenu .rightBox .inputBx .inputSearchShow{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 30rem;
+   overflow-y: scroll;
+}
+.menu .container .controlDisplayMenu .rightBox .inputBx.recommendSearch .inputSearchShow{
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu .container .controlDisplayMenu .rightBox .inputBx .inputSearchShow p{
+    padding: 2rem;
+}
+.menu .container .controlDisplayMenu .rightBox .inputBx .inputSearchShow p:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+.menu .container .controlDisplayMenu .rightBox .inputBx .inputSearchShow p:last-child{margin-bottom: -0.5rem;}
+.menu .container .controlDisplayMenu .rightBox .inputBx input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #c1c0c0;
+}
+.menu .container .controlDisplayMenu .rightBox .inputBx .searchMenuBtn{
+    background: var(--yellow);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+.menu .container .controlDisplayMenu .rightBox .inputBx .searchMenuBtn:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+.menu .container .controlDisplayMenu .rightBox .isearchMenuBtn input:focus{
+    border: 1px solid var(--yellow);
+}
+
+
+/* ----------- Show Menu List  ---------- */
+/* if user search data it not have */
+.menu .container .showMenuList{
+    display: block;
+    text-align: center;
+}
+.menu .container .showMenuList .image img{
+    max-width: 30rem;
+    max-height: 30rem;
+    width: 100%;
+    height: 100%;
+}
+/*  if user search data it have */
+.menu .container .showMenuList.haveMenuList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(22rem,1fr));
+    gap: 2rem;
+}
+
+.menu .container .showMenuList.haveMenuList .menuItem{
+    background: var(--white);
+    text-align: center;
+    padding:2rem 2rem 0;
+}
+.menu .container .showMenuList.haveMenuList .menuItem .image{
+    margin-bottom: 2rem;
+}
+.menu .container .showMenuList.haveMenuList .menuItem .image img{
+    width: 10rem;
+    height: 10rem;
+}
+.menu .container .showMenuList.haveMenuList .menuItem .category{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background: var(--yellow);
+    padding: .5rem 1.2rem;
+    display: inline-block;
+}
+
+.menu .container .showMenuList.haveMenuList .menuItem .name{
+    font-size: 1.9rem;
+}
+
+.menu .container .showMenuList.haveMenuList .menuItem .price{
+    margin: 1rem 0;
+}
+
+.menu .container .showMenuList.haveMenuList .menuItem .rate{
+    color: var(--yellow);
+}
+
+.menu .container .showMenuList.haveMenuList .menuItem .controlMenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.menu .container .showMenuList.haveMenuList .menuItem .controlMenu .viewMenu,
+.menu .container .showMenuList.haveMenuList .menuItem .controlMenu .addCart,
+.menu .container .showMenuList.haveMenuList .menuItem .controlMenu .addWishlist{
+    background: var(--blackBlue);
+    color: white;
+    padding: .5rem;
+    font-size: 2rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+}
+.menu .container .showMenuList.haveMenuList .menuItem .controlMenu .viewMenu:hover,
+.menu .container .showMenuList.haveMenuList .menuItem .controlMenu .addCart:hover,
+.menu .container .showMenuList.haveMenuList .menuItem .controlMenu .addWishlist:hover{
+    color: var(--yellow);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+
+
+/* --------------- [Menu popup] ----------------- */
+.menuPopupContain{ 
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+}
+.menuPopupContainer.show{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem ;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transition: all .2s ease;
+}
+.menuPopupContainer .menuPopupControl{
+    position: relative;
+}
+.menuPopupContainer .menuPopupControl .controlBtn{
+    background: var(--yellow);
+    color: white;
+    font-size: 3rem;
+    padding: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuPopupContainer .menuPopupControl .controlBtn:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+.menuPopupContainer .menuPopupControl .close{position: absolute; top: 0; right: 0; z-index: 10; opacity: 0; transition: all .3s ease;}
+.menuPopupContainer .menuPopupControl .prev{position: absolute; top: 105%; left: 0;  z-index: 10; opacity: 0; transition: all .3s ease;}
+.menuPopupContainer .menuPopupControl .next{position: absolute; top: 105%; right:0; z-index: 10; opacity: 0; transition: all .3s ease;}
+.menuPopupContainer.show .menuPopupControl .close{opacity: 1;}
+.menuPopupContainer.show .menuPopupControl .prev{opacity: 1;}
+.menuPopupContainer.show .menuPopupControl .next{opacity: 1;}
+
+.menuPopupContainer .menuPopupControl .menuPopupContent{
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+  padding: 3rem;
+  max-width: 80rem;
+  transform: scale(0);
+  transition: all .2s ease;
+}
+.menuPopupContainer.show .menuPopupControl .menuPopupContent{
+    transform: scale(1);
+}
+/*-- right */
+.menuPopupContainer .menuPopupControl .menuPopupContent .right .menuName{
+    color: var(--blackBlue);
+    font-weight: 500;
+}
+.menuPopupContainer .menuPopupControl .menuPopupContent .right .category{
+    background: var(--yellow);
+    border-radius: 1rem;
+    padding: .5rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.menuPopupContainer .menuPopupControl .menuPopupContent .right .price{
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--blackBlue);
+  margin-bottom: 2rem;
+}
+
+.menuPopupContainer .menuPopupControl .menuPopupContent .right .rateBox i{
+    color: var(--yellow);
+    margin: 1rem 0;
+}
+
+.menuPopupContainer .menuPopupControl .menuPopupContent .right .detail{
+    color: var(--gray2);
+    line-height: 2.6rem;
+}
+
+.menuPopupContainer .menuPopupControl .menuPopupContent .right .inputBx{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+.menuPopupContainer .menuPopupControl .menuPopupContent .right .inputBx input{
+    width: 18%;
+    padding: 1.1rem;
+    border: none;
+    outline: none;
+    background:#f1f1f1;
+    text-align: center;
+}
+.menuPopupContainer .menuPopupControl .menuPopupContent .right .inputBx .plusBtn , .menuPopupContainer .menuPopupControl .menuPopupContent .right .inputBx .minusBtn{
+    background: var(--yellow);
+    padding: .8rem 1.2rem;
+    font-size: 1.8rem;
+}
+
+.menuPopupContainer .menuPopupControl .menuPopupContent .right .inputBx .plusBtn:hover 
+, .menuPopupContainer .menuPopupControl .menuPopupContent .right .inputBx .minusBtn:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+.menuPopupContainer .menuPopupControl .menuPopupContent .right .addToCartBtn{
+    background: var(--yellow);
+    color: var(--white);
+    display: inline-block;
+    padding: 1.2rem 2rem;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+}
+
+.menuPopupContainer .menuPopupControl .menuPopupContent .right .addToCartBtn:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ MEDIA QUERY --------------- */
+@media screen and (max-width:678px){
+    .menu .container .controlDisplayMenu{
+        display: block;
+        margin-bottom: 5rem;
+    }
+    .menu .container .controlDisplayMenu .leftBox{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .menu .container .controlDisplayMenu .rightBox .inputBx{
+        margin-top: 2rem;
+    }
+
+    /*-------------  Menu Popup -----------*/
+    .menuPopupContainer .menuPopupControl .menuPopupContent{
+        display: grid;
+        grid-template-columns:1fr;
+      }
+      .menuPopupContainer .menuPopupControl .menuPopupContent .left .image{
+        text-align: center;
+      }
+      .menuPopupContainer .menuPopupControl .menuPopupContent .left .image img{
+         width: 15rem;
+         height: 15rem;
+      }
+}
+
+@media screen and (max-width:480px){
+  .menuPopupContainer .menuPopupContent{
+      font-size: 90%;
+  }
+  .menu .container .showMenuList.haveMenuList .menuItem .image img{
+    width: 8rem;
+    height: 8rem;
+}
+/*  next prev close btn */
+.menuPopupContainer .menuPopupControl .controlBtn{
+    font-size: 2.5rem;
+}
+.menuPopupControl .prev{position: absolute; top: 102%; left: 0; }
+.menuPopupControl .next{position: absolute; top: 102%; right:0;}
+}

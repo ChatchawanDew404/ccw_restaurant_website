@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table</title>
+    <link rel="icon" href="image/logo.png"  type="image/x-icon">
+     <!-- swiper -->
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+   />
+     <!-- box icon import -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css -->
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navigationbar.css">
+     <link rel="stylesheet" href="css/footer.css">
+     <!-- book a table css -->
+      <link rel="stylesheet" href="css/pageStyle/booktable.css">
+</head>
+<body>
+    <!----  NAVIGATION BAR (navigationBar.js)---->
+ <nav></nav>
+
+
+
+<!--GENERAL BANNER SECTION-->
+<section class="sectionBanner">
+    <div class="container">
+     <div class="content">
+         <h2>BOOK A TABLE</h2>
+          <p><span>HOME</span>
+             <span>/</span>
+             <span>PAGES</span>
+             <span>/</span>
+             <span>BOOKTABLE</span>
+         </p>
+     </div>
+    </div>
+   </section>
+
+
+<!-- BOOKING SECTION -->
+ <section class="booking">
+    <div class="container">
+        <div class="bookingRow">
+            <div class="leftBx">
+                <div class="image">
+                    <img src="./image/aboutImg1_3.jpg" alt="">
+                </div>
+                <div class="showVideo">
+                    <div class="animationPlayBtn"><i class='bx bxs-right-arrow'></i></div>
+                </div>
+            </div>
+            <div class="rightBx">
+                <div class="header">
+                    <span>Reservation</span>
+                    <h2>Book A Table Online</h2>
+                </div>
+                <div class="inputRow">
+                    <div class="inputBx">
+                        <input type="text" placeholder="Your name..." id="nameInput"/>
+                        <p class="errTx"></p>
+                    </div>
+                    <div class="inputBx">
+                        <input type="text" placeholder="Your email..." id="emailInput"/>
+                        <p class="errTx"></p>
+                    </div>
+                </div>
+                <div class="inputRow">
+                    <div class="inputBx">
+                        <input type="date" id="dateInput">
+                        <p class="errTx"></p>
+                    </div>
+                    <div class="inputBx">
+                        <input type="number" placeholder="No of people" id="numberInput"/>
+                        <p class="errTx"></p>
+                    </div>
+                </div>
+                <div class="inputBx"><textarea type="text" placeholder="Special Request" id="specialInput"></textarea></div>
+                <button class="submitBooking">Book Now</button>
+            </div>
+        </div>
+
+        <div class="videoContainer">
+            <div class="videoContent">
+                <div class="closeVideo"><i class='bx bx-x' ></i></div>
+                <video id="video" autoplay loop play>
+                    <source src="./video/3196344-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+                  </video>
+            </div>
+        </div>
+    </div>
+ </section>
+
+
+   <!----- FOOTER SECTION (footer.js)---->
+   <footer>
+</footer>
+
+ <!-- PRELOADER (preloader.js) -->
+ <section class="preloader">
+    <div class="content">
+        <div class="preloaderGif">
+            <img src="./image/imgSpinBanner1.png" alt="">
+        </div>
+    
+        <h3>Loading...</h3>
+    </div>
+   </section>
+
+
+
+<!-- import box icon -->
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<!-- import Swiper script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- import SweetAlert 2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <!--All script -->
+ <script src="./js/swiperScript/allSwiper.js"></script>
+ <script src="./js/preloader.js"></script>
+ <script src="./js/navigationBar.js"></script>
+ <script src="./js/footer.js"></script>
+ <script src="./js/pageScript/booktable.js"></script>
+ 
+</body>
+</html>

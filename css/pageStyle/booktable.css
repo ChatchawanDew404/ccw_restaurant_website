@@ -1,0 +1,258 @@
+.sectionBanner{
+    width: 100%;
+    height: 60dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+    background: url('/image/aboutImg1_3.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    text-align: center;
+}
+
+.sectionBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 23, 43,0.85);
+    z-index: -1;
+}
+.sectionBanner .content{
+    text-align: center;
+}
+.sectionBanner .content h2{
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.sectionBanner .content p{
+    text-align: center;
+    color: white;
+}
+.sectionBanner .content p span{
+    padding: .5rem;
+}
+.sectionBanner .content p span:nth-child(1),
+.sectionBanner .content p span:nth-child(3){
+    color: var(--yellow);
+}
+.sectionBanner .content p span:nth-child(2),
+.sectionBanner .content p span:nth-child(4){
+    color: #8d8c8c;
+}
+
+
+
+
+
+
+
+/* BookingBox */
+.booking .container .bookingRow{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+/* leftBx */
+.booking .container .bookingRow .leftBx{
+    position: relative;
+}
+.booking .container .bookingRow .leftBx .image{
+    height: 100%;
+}
+.booking .container .bookingRow .leftBx .showVideo{
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: var(--yellow);
+    padding: 2rem;
+    font-size: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0 !important;
+    transition: all .2s ease;
+}
+.booking .container .bookingRow .leftBx .showVideo:hover{
+    background: var(--yellowHover);
+    padding: 2.5rem;
+    cursor: pointer;
+}
+.booking .container .bookingRow .leftBx .showVideo i{
+    z-index: 2 !important;
+}
+
+.booking .container .bookingRow .leftBx .showVideo::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(248, 181, 81, 0.8);
+    padding: 0;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: -1;
+    animation:animationBtnPlay 2s 1s infinite ;
+}
+
+@keyframes animationBtnPlay{
+    0%{padding: 0rem;}
+    100%{padding: 8rem; background: none;}
+}
+
+
+/* rightBx */
+.booking .container .bookingRow .rightBx{
+    background: var(--blackBlue);
+    padding: 3rem;
+}
+
+.booking .container .bookingRow .rightBx .header h2{
+    color: var(--white);
+}
+
+.booking .container .bookingRow .rightBx .inputRow{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0 2rem;
+}
+
+.booking .container .bookingRow .rightBx .inputRow input{
+    width: 100%;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    padding: 1.2rem;
+}
+.booking .container .bookingRow .rightBx .inputBx{
+    margin-bottom: 2rem;
+}
+.booking .container .bookingRow .rightBx .inputBx input{
+    width: 100%;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    padding: 1.2rem;
+}
+.booking .container .bookingRow .rightBx .inputBx input:focus{
+    outline:2px solid var(--yellow);
+}
+
+.booking .container .bookingRow .rightBx .inputBx textarea{
+    width: 100%;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    padding: 1.2rem;
+    resize: none;
+}
+.booking .container .bookingRow .rightBx .inputBx textarea:focus{
+    outline:2px solid var(--yellow);
+}
+
+.booking .container .bookingRow .rightBx  .submitBooking{
+    background: var(--yellow);
+    border: 1px solid var(--yellow);
+    padding: 1.5rem 3rem;
+    display:block;
+    width: 100%;
+    color: white;
+    transition:all .2s ease;
+    font-size: 1.6rem;
+    outline: none;
+}
+.booking .container .bookingRow .rightBx  .submitBooking:hover{
+    background:var(--yellowHover);
+    
+    cursor: pointer;
+}
+
+
+
+/* -------- videoContainer ---------- */
+.videoContainer{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0,0.9);
+    z-index: 11;
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.videoContainer.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.videoContainer .videoContent{
+    transform: translateY(-100%);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: all .5s ease;
+    opacity: 0;
+}
+.videoContainer.show .videoContent{
+    transform: translateY(0);
+    opacity: 1;
+}
+.videoContainer .videoContent .closeVideo{
+    position: absolute;
+    right:20px;
+    top: 20px;
+    padding: 1rem;
+    background: var(--yellow);
+    color: white;
+    font-size: 3rem;
+}
+.videoContainer .videoContent .closeVideo:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+.videoContainer .videoContent video{
+    width: 100%;
+    max-width: 60rem;
+    max-height: 60rem;
+}
+
+
+
+
+
+
+
+/* ----------- MEDIA QUERY ---------*/
+@media screen and (max-width:768px){
+    .booking .container .bookingRow{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+
+@media screen and (max-width:480px){
+    .booking .container .bookingRow .rightBx .header h2{
+      font-size: 3rem;
+    }
+    .booking .container .bookingRow .rightBx .inputRow{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

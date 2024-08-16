@@ -1,0 +1,259 @@
+.sectionBanner{
+    width: 100%;
+    height: 60dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+    background: url('/image/aboutImg1_3.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    text-align: center;
+}
+
+.sectionBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 23, 43,0.85);
+    z-index: -1;
+}
+.sectionBanner .content{
+    text-align: center;
+}
+.sectionBanner .content h2{
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.sectionBanner .content p{
+    text-align: center;
+    color: white;
+}
+.sectionBanner .content p span{
+    padding: .5rem;
+}
+.sectionBanner .content p span:nth-child(1),
+.sectionBanner .content p span:nth-child(3){
+    color: var(--yellow);
+}
+.sectionBanner .content p span:nth-child(2),
+.sectionBanner .content p span:nth-child(4){
+    color: #8d8c8c;
+}
+
+
+
+/* ----------- CHECKOUT SECTION */
+.checkout .container .loginRegisterQuestion,
+.checkout .container .couponQuestion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem;
+    font-size: 1.5rem;
+    background: var(--yellowOpacity);
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+.checkout .container .loginRegisterQuestion a{
+    color:var(--black);
+}
+.checkout .container .loginRegisterQuestion:hover,
+.checkout .container .couponQuestion:hover{
+background: var(--yellow);
+}
+
+/*- orderGrid -*/
+.checkout .container .orderCheckout{
+    display: grid;grid-template-columns: repeat(2,1fr);
+    gap: 4rem;
+    margin-top: 5rem;
+}
+/* left */
+.checkout .container .orderCheckout .leftBx h3{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.checkout .container .orderCheckout .leftBx .inputBx{
+    margin-bottom: 2rem;
+}
+.checkout .container .orderCheckout .leftBx .inputBx h3{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.checkout .container .orderCheckout .leftBx .inputBx input{
+    padding:1.5rem 1.2rem;
+    border: 1px solid var(--gray);
+    outline: none;
+    font-size: 1.6rem;
+    width: 100%;
+    border-radius: 5px;
+}
+.checkout .container .orderCheckout .leftBx .inputBx input[type="text"]:disabled {
+    background: #dddddd;
+  }
+.checkout .container .orderCheckout .leftBx .inputBx textarea{
+    padding:1.5rem 1.2rem;
+    border: 1px solid var(--gray);
+    outline: none;
+    font-size: 1.6rem;
+    width: 100%;
+    border-radius: 5px;
+    resize: none;
+    min-height: 15rem;
+}
+.checkout .container .orderCheckout .leftBx .inputBx input:focus{
+    border: 1px solid var(--yellow);
+}
+.checkout .container .orderCheckout .leftBx .inputBx textarea:focus{
+    border: 1px solid var(--yellow);
+}
+
+
+/* right */
+.checkout .container .orderCheckout .rightBx .showYourOrder{
+    margin-bottom: 4rem;
+}
+.checkout .container .orderCheckout .rightBx .showYourOrder h3{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.checkout .container .orderCheckout .rightBx .showYourOrder .yourOrderBx{
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 1rem;
+}
+.checkout .container .orderCheckout .rightBx .showYourOrder .yourOrderBx ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.checkout .container .orderCheckout .rightBx .showYourOrder .yourOrderBx ul.showAllMenuPrice{
+    max-height: 20rem;
+    overflow-y: scroll;
+}
+.checkout .container .orderCheckout .rightBx .showYourOrder .yourOrderBx ul.showAllMenuPrice li{
+    background: var(--white);
+    border-bottom: 1px solid var(--gray3);
+    font-size: 1.5rem;
+}
+.checkout .container .orderCheckout .rightBx .showYourOrder .yourOrderBx ul.showAllMenuPrice li span.qty{
+    margin-left: 1rem;
+}
+.checkout .container .orderCheckout .rightBx .showYourOrder .yourOrderBx ul.showTotal li{
+    background: var(--yellowOpacity);
+    font-size: 1.5rem;
+}
+.checkout .container .orderCheckout .rightBx .showYourOrder .yourOrderBx ul.showTotal li:nth-child(2){
+    border: none;
+}
+
+.checkout .container .orderCheckout .rightBx .paymentMethodBx h3{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.checkout .container .orderCheckout .rightBx .paymentMethodBx .paymentCtn{
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+}
+
+.checkout .container .orderCheckout .rightBx .paymentMethodBx .paymentCtn .paymentBx {
+    border-bottom: 1px solid var(--gray3);
+    padding-bottom: 1.5rem;
+}
+.checkout .container .orderCheckout .rightBx .paymentMethodBx .paymentCtn .paymentBx .cardtx{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.checkout .container .orderCheckout .rightBx .paymentMethodBx .paymentCtn .paymentBx .cardtx i{
+    color: var(--yellow);
+    font-size: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+.checkout .container .orderCheckout .rightBx .paymentMethodBx .paymentCtn .paymentBx p{
+    color: var(--gray);
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+}
+
+.checkout .container .orderCheckout .rightBx .paymentMethodBx .paymentCtn ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray3);
+    padding: 1.5rem 0;
+}
+.checkout .container .orderCheckout .rightBx .paymentMethodBx .paymentCtn  ul li:nth-child(4){
+    border: none;
+    margin-bottom: -1rem;
+}
+.checkout .container .orderCheckout .rightBx .paymentMethodBx .paymentCtn  ul li i{
+    color: var(--yellow);
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.checkout .container .orderCheckout .rightBx .paymentMethodBx .paymentCtn .paymentBx .cardtx span input[type="radio"],
+.checkout .container .orderCheckout .rightBx .paymentMethodBx .paymentCtn ul li span input[type="radio"]{
+    height: 2.5rem;
+    width: 2.5rem;
+    accent-color:black;
+} 
+
+.checkout .container .orderCheckout .rightBx .alertDetail{
+    background: var(--gray3);
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+}
+.checkout .container .orderCheckout .rightBx .alertDetail p{
+    font-size: 1.4rem;
+    color: var(--black);
+    line-height: 2.4rem;
+}
+
+.checkout .container .orderCheckout .rightBx .submitPayment{
+    background: var(--yellow);
+    border: 1px solid var(--yellow);
+    padding: 1.5rem 3rem;
+    display:block;
+    width: 100%;
+    color: white;
+    transition:all .2s ease;
+    font-size: 1.6rem;
+    outline: none;
+}
+.checkout .container .orderCheckout .rightBx .submitPayment:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* -------------- MEDIA QUERY ----------------------- */
+@media screen and (max-width:768px){
+    .checkout .container .orderCheckout{
+        display: grid;
+       grid-template-columns: 1fr;
+    }
+}

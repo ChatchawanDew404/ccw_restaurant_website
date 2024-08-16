@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViewCart</title>
+    <link rel="icon" href="image/logo.png"  type="image/x-icon">
+     <!-- swiper -->
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+   />
+     <!-- box icon import -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css -->
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navigationbar.css">
+     <link rel="stylesheet" href="css/footer.css">
+     <!-- view cart -->
+      <link rel="stylesheet" href="css/pageStyle/viewCart.css">
+</head>
+<body>
+      <!----  NAVIGATION BAR (navigationBar.js)---->
+ <nav>
+</nav>
+
+<!--GENERAL BANNER SECTION-->
+<section class="sectionBanner">
+    <div class="container">
+     <div class="content">
+         <h2>YOUR CART</h2>
+          <p><span>HOME</span>
+             <span>/</span>
+             <span>PAGES</span>
+             <span>/</span>
+             <span>CART</span>
+         </p>
+     </div>
+    </div>
+   </section>
+
+
+<!-- CART SECTION -->
+ <section class="cart">
+  <div class="container">
+    <div class="header">
+      <span>CART</span>
+      <h2>Your Cart</h2>
+    </div>
+
+
+    <div class="cart_container">
+      <table id="cartTable" class="cartTable">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>SubTotal</th>
+            <th>Cancel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- show data in (viewcart.js) -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cartCouponAndTotal">
+      <div class="cartCouponBx">
+        <div class="inputBx">
+          <input type="text" class="couponInput">
+          <button class="applyCouponBtn">Apply Coupon</button>
+        </div>
+      </div>
+      <div class="cartTotalBx">
+        <div class="displayDataTotal">
+          <h3>Cart total</h3>
+        <ul>
+          <!-- show data in (viewcart.js) -->
+          <li><span>Sub Total</span><span class="SubTotalDisplay">0.00$</span></li>
+          <li><span>Coupon</span><span class="CouponDisplay">-</span></li>
+          <li><span>Tax</span><span class="taxDisplay">7%</span></li>
+          <li><span>Total</span><span class="totalDisplay">0.00$</span></li>
+        </ul>
+        </div>
+        <a href="./checkout.html" class="checkoutBtn">Proceed to Checkout</a>
+      </div>
+    </div>
+  </div>
+ </section>
+
+
+  <!----- FOOTER SECTION (footer.js)---->
+  <footer>
+  </footer>
+  
+ <!-- PRELOADER (preloader.js) -->
+ <section class="preloader">
+  <div class="content">
+      <div class="preloaderGif">
+          <img src="./image/imgSpinBanner1.png" alt="">
+      </div>
+  
+      <h3>Loading...</h3>
+  </div>
+ </section>
+
+
+<!-- import box icon -->
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<!-- import Swiper script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- import SweetAlert 2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <!--All script -->
+ <script src="./js/swiperScript/allSwiper.js"></script>
+ <script src="./js/preloader.js"></script>
+ <script src="./js/navigationBar.js"></script>
+ <script src="./js/pageScript/viewcart.js"></script>
+ <script src="./js/footer.js"></script>
+</body>
+</html>

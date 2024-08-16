@@ -1,0 +1,173 @@
+.sectionBanner{
+    width: 100%;
+    height: 60dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+    background: url('/image/aboutImg1_3.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    text-align: center;
+}
+
+.sectionBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 23, 43,0.85);
+    z-index: -1;
+}
+.sectionBanner .content{
+    text-align: center;
+}
+.sectionBanner .content h2{
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.sectionBanner .content p{
+    text-align: center;
+    color: white;
+}
+.sectionBanner .content p span{
+    padding: .5rem;
+}
+.sectionBanner .content p span:nth-child(1),
+.sectionBanner .content p span:nth-child(3){
+    color: var(--yellow);
+}
+.sectionBanner .content p span:nth-child(2),
+.sectionBanner .content p span:nth-child(4){
+    color: #8d8c8c;
+}
+
+/* *{border: 1px solid red;} */
+/* ------------- ACCOUNT SECTION -------------------- */
+.account .container .account_container{
+    display: grid;
+    grid-template-columns: minmax(30rem,1fr) 2fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+/* left */
+.account .container .account_container .leftBx{
+    color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.account .container .account_container .leftBx .image{
+    width: 15rem;
+    height: 15rem;
+    margin:1rem auto 3rem;
+}
+
+.account .container .account_container .leftBx .content{
+    background: var(--blackBlue);
+    padding: 2rem;
+    border-radius: 5px;
+}
+.account .container .account_container .leftBx .content ul li{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+    gap:0 2rem;
+    margin-bottom: 1rem;
+}
+
+.account .container .account_container .leftBx .content ul li:nth-child(2){
+   text-align: left;
+}
+
+.account .container .account_container .leftBx .content ul li p:nth-child(2){
+    width: 100%;
+    text-align: right;
+}
+
+.account .container .account_container .leftBx .logoutBtn{
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgb(255, 128, 128);
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.account .container .account_container .leftBx .logoutBtn:hover{
+    background: red;
+    cursor: pointer;
+}
+
+/* right */
+.account .container .account_container .rightBx{
+    background: url('/image/memberSection.jpg');
+    background-size: cover;
+    background-repeat: none;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.account .container .account_container .rightBx::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0,0.7);
+    z-index: -1;
+}
+
+.account .container .account_container .rightBx{
+    max-width: 70rem;
+    text-align: center;
+    z-index: 3;
+}
+.account .container .account_container .rightBx h2{
+    color: var(--white);
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+.account .container .account_container .rightBx .membershipBtn{
+    background: var(--yellow);
+    color: black;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.account .container .account_container .rightBx .membershipBtn:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+/* -------------- MEDIA QUERY ------------------- */
+@media screen and (max-width:768px){
+    .account .container .account_container{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    .account .container .account_container .rightBx{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:480px){
+    .account .container .account_container .rightBx h2{
+        font-size: 2.5rem;
+    }
+    
+}
+/* *{border: 1px solid red;} */

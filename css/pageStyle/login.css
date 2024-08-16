@@ -1,0 +1,149 @@
+.sectionBanner{
+    width: 100%;
+    height: 60dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+    background: url('/image/aboutImg1_3.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    text-align: center;
+}
+.sectionBanner .content{
+    text-align: center;
+}
+.sectionBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 23, 43,0.85);
+    z-index: -1;
+}
+
+.sectionBanner .content h2{
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.sectionBanner .content p{
+    text-align: center;
+    color: white;
+}
+.sectionBanner .content p span{
+    padding: .5rem;
+}
+.sectionBanner .content p span:nth-child(1),
+.sectionBanner .content p span:nth-child(3){
+    color: var(--yellow);
+}
+.sectionBanner .content p span:nth-child(2),
+.sectionBanner .content p span:nth-child(4){
+    color: #8d8c8c;
+}
+
+
+/* ------------- SIGN UP SECTION ---------*/
+.login .container .header h2{
+    font-size: 4rem;
+    color: var(--yellow);
+    margin-bottom:1rem ;
+}
+.login .container .header p{
+    font-size: 1.5rem;
+    color: var(--white);
+    max-width: 40rem;
+    margin: auto;
+}
+
+.login .container .loginContent{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+/* leftBx */
+.login .container .loginContent .loginLeftBx .image{
+height: 100%;
+}
+
+/* rightBx */
+.login .container .loginContent .loginRightBx{
+   padding:3rem;
+   background: var(--blackBlue);
+}
+
+.login .container .loginContent .loginRightBx .inputRow{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 2rem;    
+}
+ 
+.login .container .loginContent .loginRightBx .inputBx{
+    margin-bottom: 2rem;
+}
+.login .container .loginContent .loginRightBx .inputBx input{
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    border: none;
+    outline: none;
+}
+.login .container .loginContent .loginRightBx .inputBx input:focus{
+   outline: 2px solid var(--yellow);
+}
+
+.login .container .loginContent .loginRightBx .confirm{
+    display: flex;
+    gap: 1rem;
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.login .container .loginContent .loginRightBx .submitLogin{
+    background: var(--yellow);
+    border: 1px solid var(--yellow);
+    padding: 1.5rem 3rem;
+    display:block;
+    width: 100%;
+    color: white;
+    transition:all .2s ease;
+    font-size: 1.6rem;
+    outline: none;
+}
+.login .container .loginContent .loginRightBx .submitLogin:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+.login .container .loginContent .loginRightBx .noHaveAccTx{
+    margin-top: 2rem;
+    color: var(--yellow);
+      text-decoration: underline;
+    display: inline-block;
+}
+.login .container .loginContent .loginRightBx .noHaveAccTx:hover{
+    color: var(--yellowHover);
+    cursor: pointer;
+}
+
+@media screen and (max-width:991px){
+    .login .container .loginContent .loginRightBx .inputRow{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;    
+     }
+}
+@media screen and (max-width:768px){
+    .login .container .loginContent{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:480px){}

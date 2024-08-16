@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="image/logo.png"  type="image/x-icon">
+     <!-- swiper -->
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+   />
+     <!-- box icon import -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css -->
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navigationbar.css">
+     <link rel="stylesheet" href="css/footer.css">
+     <!-- login css -->
+      <link rel="stylesheet" href="css/pageStyle/login.css">
+</head>
+<body>
+    
+
+      <!----  NAVIGATION BAR (navigationBar.js)---->
+ <nav></nav>
+
+<!--GENERAL BANNER SECTION-->
+<section class="sectionBanner">
+    <div class="container">
+     <div class="content">
+         <h2>LOGIN</h2>
+          <p><span>HOME</span>
+             <span>/</span>
+             <span>PAGES</span>
+             <span>/</span>
+             <span>LOGIN</span>
+         </p>
+     </div>
+    </div>
+   </section>
+
+<!-- LOGIN SECTION -->
+<section class="login">
+    <div class="container">
+        <div class="loginContent">
+            <div class="loginLeftBx">
+                    <div class="image"><img src="/image/aboutImg1_1.jpg" alt=""></div>
+            </div>
+            <div class="loginRightBx">
+                <div class="header">
+                    <h2>Login</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolorum?</p>
+                </div>
+                   <div class="inputBx">
+                    <input type="Email" placeholder="Email..." id="emailInput">
+                    <p class="errTx"></p>
+                   </div>
+                   <div class="inputBx">
+                    <input type="text" placeholder="password..." id="pwdInput">
+                    <p class="errTx"></p>
+                   </div>
+                
+                   <button class="submitLogin">Login</button>
+                   <a href="./signup.html" class="noHaveAccTx">Don't have an Account ? login</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!----- FOOTER SECTION (footer.js)---->
+  <footer>
+  </footer>
+  
+ <!-- PRELOADER (preloader.js) -->
+ <section class="preloader">
+  <div class="content">
+      <div class="preloaderGif">
+          <img src="./image/imgSpinBanner1.png" alt="">
+      </div>
+  
+      <h3>Loading...</h3>
+  </div>
+ </section>
+
+
+<!-- import box icon -->
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<!-- import Swiper script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- import SweetAlert 2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <!--All script -->
+ <script src="./js/swiperScript/allSwiper.js"></script>
+ <script src="./js/preloader.js"></script>
+ <script src="./js/navigationBar.js"></script>
+ <script src="./js/footer.js"></script>
+ <script src="./js/pageScript/login.js"></script>
+</body>
+</html>

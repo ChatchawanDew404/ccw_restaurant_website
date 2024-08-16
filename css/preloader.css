@@ -1,0 +1,47 @@
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blackBlue);
+    z-index: 10;
+    transition: all .3s ease;
+    opacity: 1;
+}
+
+.preloader.loadFinish{
+  opacity: 0;
+  visibility: hidden;
+  /* animation-name: fadeWebsite;
+  animation-duration: 2s; */
+  
+}
+.preloader .content{
+    text-align: center;
+}
+.preloader .content .preloaderGif{
+    width: 20rem;
+    height: 20rem;
+    animation: rotation 5s infinite linear;
+}
+
+.preloader .content h3{
+    color: var(--white);
+    font-size: 3rem;
+    margin:3rem auto 0;
+}
+
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }

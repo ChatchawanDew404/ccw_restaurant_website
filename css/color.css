@@ -1,0 +1,13 @@
+:root{
+    --blackBlue:#0f172b;
+    --gray:#9a9a9a;
+    --gray2:#747373;
+    --gray3:rgb(213, 213, 213,0.5);
+    --lightGray:#e9ecef;
+    --yellowHover:#ffb94f;
+    --yellow:#fea116;
+    --yellowOpacity:rgb(254, 161, 22,0.3);
+    --white:#fff;
+    --black:#000;
+    --black2:rgb(29, 1, 1,0.2);
+}

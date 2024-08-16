@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="icon" href="image/logo.png"  type="image/x-icon">
+     <!-- swiper -->
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+   />
+     <!-- box icon import -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css -->
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navigationbar.css">
+     <link rel="stylesheet" href="css/footer.css">
+     <!-- signup css -->
+      <link rel="stylesheet" href="css/pageStyle/signup.css">
+</head>
+<body>
+    
+
+
+      <!----  NAVIGATION BAR (navigationBar.js)---->
+ <nav></nav>
+
+
+
+<!--GENERAL BANNER SECTION-->
+<section class="sectionBanner">
+    <div class="container">
+     <div class="content">
+         <h2>SIGNUP</h2>
+          <p><span>HOME</span>
+             <span>/</span>
+             <span>PAGES</span>
+             <span>/</span>
+             <span>Signup</span>
+         </p>
+     </div>
+    </div>
+   </section>
+
+
+ <!-- SIGN UP SECTION -->
+  <section class="signup">
+    <div class="container">
+        <div class="signupContent">
+            <div class="signupLeftBx">
+                    <div class="image"><img src="/image/aboutImg1_4.jpg" alt=""></div>
+            </div>
+            <div class="signupRightBx">
+                <div class="header">
+                    <h2>Sign up</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolorum?</p>
+                </div>
+                   <div class="inputRow">
+                    <div class="inputBx">
+                      <input type="text" placeholder="Firstname..." id="firstnameInput">
+                      <p class="errTx"></p>
+                    </div>
+                    <div class="inputBx">
+                      <input type="text" placeholder="Lastname..." id="lastnameInput">
+                      <p class="errTx"></p>
+                    </div>
+                   </div>
+                   <div class="inputRow">
+                    <div class="inputBx">
+                      <input type="email" placeholder="Email..." id="emailInput">
+                      <p class="errTx"></p>
+                    </div>
+                    <div class="inputBx">
+                      <input type="tel" placeholder="Phone(0000000000)..."  id="phoneInput">
+                      <p class="errTx"></p>
+                    </div>
+                    </div>
+
+                   <div class="inputBx">
+                    <input type="text" placeholder="password..." id="passwordInput">
+                    <p class="errTx"></p>
+                   </div>
+                   <div class="confirm">
+                    <input type="checkbox" name="" id="acceptTheOffer">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsa fuga quibusdam quae dolore maxime.</span>
+                   </div>
+                   <button class="submitSignup">Sign up</button>
+                   <a href="./login.html" class="haveAccTx">Already have an Account ? login</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!----- FOOTER SECTION (footer.js)---->
+  <footer>
+  </footer>
+
+ <!-- PRELOADER (preloader.js) -->
+ <section class="preloader">
+  <div class="content">
+      <div class="preloaderGif">
+          <img src="./image/imgSpinBanner1.png" alt="">
+      </div>
+  
+      <h3>Loading...</h3>
+  </div>
+ </section>
+
+<!-- import box icon -->
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<!-- import Swiper script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- import SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <!--All script -->
+ <script src="./js/swiperScript/allSwiper.js"></script>
+ <script src="./js/preloader.js"></script>
+ <script src="./js/navigationBar.js"></script>
+ <script src="./js/footer.js"></script>
+ <script src="./js/pageScript/signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="icon" href="image/logo.png"  type="image/x-icon">
+     <!-- swiper -->
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+   />
+     <!-- box icon import -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css -->
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navigationbar.css">
+     <link rel="stylesheet" href="css/footer.css">
+     <!-- menu css -->
+      <link rel="stylesheet" href="css/pageStyle/menu.css">
+</head>
+<body>
+    
+
+
+     <!----  NAVIGATION BAR (navigationBar.js)---->
+ <nav></nav>
+
+
+
+<!--GENERAL BANNER SECTION-->
+<section class="sectionBanner">
+    <div class="container">
+     <div class="content">
+         <h2>MENU</h2>
+          <p><span>HOME</span>
+             <span>/</span>
+             <span>PAGES</span>
+             <span>/</span>
+             <span>MENU</span>
+         </p>
+     </div>
+    </div>
+   </section>
+
+
+   <!-------- MENU SECTION ----------- -->
+   <section class="menu">
+    <div class="container">
+      <div class="controlDisplayMenu">
+        <div class="leftBox">
+            <div class="categoryBox">
+                <!-- control (menu.js) -->
+                <select name="" id="selectCategory">
+                </select>
+            </div>
+            <!-- control (menu.js) -->
+            <div class="rateBox">
+                <select name="" id="selectRate">
+                </select>
+            </div>
+        </div>
+        <div class="rightBox">
+            <div class="searchBox">
+                <div class="inputBx">
+                    <input type="text" placeholder="Search name here..." id="searchMenu">
+                    <div class="searchMenuBtn"><i class='bx bx-search-alt-2'></i></div>
+                    <!-- recommend search (menu.js) -->
+                    <div class="inputSearchShow">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Show all menu data content (menu.js) -->
+      <div class="showMenuList">
+        <div class="displayNotHaveMenu">
+        </div>
+      </div>
+    </div>
+   </section>
+
+   <!-- MENU POPUP SECTION (menu.js)-->
+    <section class="menuPopupContainer">
+    </section>
+
+   <!----- FOOTER SECTION (footer.js)---->
+   <footer>
+  </footer>
+
+ <!-- PRELOADER (preloader.js) -->
+ <section class="preloader">
+  <div class="content">
+      <div class="preloaderGif">
+          <img src="./image/imgSpinBanner1.png" alt="">
+      </div>
+  
+      <h3>Loading...</h3>
+  </div>
+ </section>
+
+<!-- import box icon -->
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<!-- import Swiper script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- import SweetAlert 2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <!--All script -->
+ <script src="./js/swiperScript/allSwiper.js"></script>
+ <script src="./js/preloader.js"></script>
+ <script src="./js/navigationBar.js"></script>
+ <script src="./js/footer.js"></script>
+ <script src="./js/pageScript/menu.js"></script>
+</body>
+</html>

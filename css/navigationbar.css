@@ -1,0 +1,515 @@
+@import '/css/color.css';
+
+
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: all .3s ease;
+}
+
+
+nav.sticky{
+    background: var(--blackBlue);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+nav .container .logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 0;
+}
+nav .container .logo img{
+    height: 6rem;
+    width: 6rem;
+}
+nav .container .logo p{color: white; font-size: 2rem; font-weight: 1000;}
+
+nav .container .rightBx {display: flex; gap: 1rem;}
+
+nav .container .rightBx .navBx{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+} 
+
+nav .container .rightBx .navBx .navlink a{
+   color: white;
+   padding: 1.5rem ;
+   transition: all .2s ease;
+   cursor: pointer;
+} 
+nav .container .rightBx .navBx .navlink a:hover{
+    color: var(--yellowHover);
+}
+
+/* -- dropdown */
+nav .container .rightBx .navBx .navlink{
+    position: relative;
+    transition: all .2s ease;
+}
+
+nav .container .rightBx .navBx .navlink p{
+    padding:2rem 1.5rem ;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+nav .container .rightBx .navBx .navlink p:hover{
+    color: var(--yellowHover);
+}
+nav .container .rightBx .navBx .navlink:hover .dropdownBox{
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+nav .container .rightBx .navBx .navlink .dropdownBox{
+    transition: all .2s ease;
+    position: absolute;
+    top: 64px;
+    opacity: 0;
+    z-index: 1;
+    visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    background: white;
+}
+nav .container .rightBx .navBx .navlink .dropdownBox ul li a{
+    color: var(--black);
+    display: block;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding-right: 6rem;
+}
+nav .container .rightBx .navBx .navlink .dropdownBox ul li a:hover{
+    background:var(--lightGray);
+    cursor: pointer;
+}
+/* ------- */
+/*  burger bar */
+nav .container .rightBx .burgerBar{
+    display: none;
+}
+
+
+
+/*-------   Sign up and login Btn box ------*/
+nav .container .rightBx  .signup_And_login_BtnBx{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+nav .container .rightBx  .signup_And_login_BtnBx.haveToken{
+    display: none;
+}
+
+nav .container .rightBx  .signup_And_login_BtnBx .signUpBtn{
+    background: var(--yellow);
+    padding: 1rem;
+    color: white;
+    border: 1px solid var(--yellow);
+    transition:all .2s ease;
+}
+nav .container .rightBx  .signup_And_login_BtnBx .loginBtn{
+    background:none;
+    padding: 1rem 1.5rem; 
+    color: white;
+    border: 1px solid var(--yellow);
+    transition:all .2s ease;
+}
+
+
+nav .container .rightBx  .signup_And_login_BtnBx .signUpBtn:hover{
+    background: var(--yellowHover);
+    border: 1px solid var(--yellowHover);
+    cursor: pointer;
+}
+nav .container .rightBx  .signup_And_login_BtnBx .loginBtn:hover{
+    background: var(--yellow);
+    cursor: pointer;
+}
+
+/*--- Authentication Btn Box */
+nav .container .rightBx  .authentication_uer_box{
+    display: none;
+}
+nav .container .rightBx  .authentication_uer_box.haveToken{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav .container .rightBx  .authentication_uer_box .cart_Bx,
+nav .container .rightBx  .authentication_uer_box .wishlist_Bx{
+    color: var(--white);
+    background: var(--yellow);
+    padding: .8rem;
+    position: relative;
+    transition: all .2s ease;
+    font-size: 2rem;
+}
+
+nav .container .rightBx  .authentication_uer_box .wishlist_Bx .wishlistNum,
+nav .container .rightBx  .authentication_uer_box .cart_Bx .cartNum{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    padding: 1rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .container .rightBx  .authentication_uer_box .cart_Bx.active{background: red;}
+nav .container .rightBx  .authentication_uer_box .wishlist_Bx.active{background: red;}
+
+nav .container .rightBx  .authentication_uer_box .cart_Bx .closeSlideBtn{display: none;}
+nav .container .rightBx  .authentication_uer_box .cart_Bx.active .closeSlideBtn{display: block;}
+nav .container .rightBx  .authentication_uer_box .cart_Bx .cartIcon{display: block;}
+nav .container .rightBx  .authentication_uer_box .cart_Bx.active .cartIcon{display: none;}
+
+
+nav .container .rightBx  .authentication_uer_box .wishlist_Bx .closeSlideBtn{display: none;}
+nav .container .rightBx  .authentication_uer_box .wishlist_Bx.active .closeSlideBtn{display: block;}
+nav .container .rightBx  .authentication_uer_box .wishlist_Bx .wishlistIcon{display: block;}
+nav .container .rightBx  .authentication_uer_box .wishlist_Bx.active .wishlistIcon{display: none;}
+
+nav .container .rightBx  .authentication_uer_box .userAcc_Bx{
+    color: var(--white);
+    background: var(--yellow);
+    padding: .8rem;
+    position: relative;
+    transition: all .2s ease;
+    font-size: 2rem;
+}
+
+nav .container .rightBx  .authentication_uer_box .cart_Bx:hover,
+nav .container .rightBx  .authentication_uer_box .wishlist_Bx:hover,
+nav .container .rightBx  .authentication_uer_box .userAcc_Bx:hover{
+   background: var(--yellowHover);
+   cursor: pointer;
+}
+
+
+
+
+/* -------------- Cart Slide Bar ------------------- */
+nav .container .rightBx .cart_slide{
+    padding: 2rem;
+    position: absolute;
+    top: 100%;
+    right: -105%;
+    height: 100dvh;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    transition: all .4s ease;
+}
+nav .container .rightBx .cart_slide.active{
+    right: 0;
+}
+
+nav .container .rightBx .cart_slide .cart_Details{
+    position: relative;
+    margin: 3rem 0;
+    overflow: scroll;
+    /* max-width: 350px; */
+    max-height: 420px;
+    scrollbar-color: rgb(255, 255, 255,0.1);
+    scrollbar-width: thin;
+}
+
+
+
+nav .container .rightBx .cart_slide .cart_Details .cartMenu{
+    font-size: 1.6rem;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+nav .container .rightBx .cart_slide .cartMenu .image img{
+    width: 50px;
+    height: 50px;
+}
+nav .container .rightBx .cart_slide .cart_Details .cartMenu .content{
+    display: flex;
+    width: 100%; 
+    gap: 1.5rem;
+    align-items:center;
+    font-size: 1.5rem;
+    justify-content: space-between;
+}
+nav .container .rightBx .cart_slide .cart_Details .cartMenu .content .menuName{
+    min-width: 10rem;
+    /* background: #000; */
+}
+nav .container .rightBx .cart_slide .cart_Details .cartMenu .content .category{
+    font-size: 1.2rem;
+    margin-top: .3rem;
+    background: var(--yellow);
+    display: inline-block;
+    padding: .3rem 1rem;
+    border-radius: 10px;
+}
+
+nav .container .rightBx .cart_slide .cart_Details .cartMenu .content .quantity{
+    min-width: 4rem;
+}
+nav .container .rightBx .cart_slide .cart_Details .cartMenu .content .price{
+    min-width: 6rem;
+}
+nav .container .rightBx .cart_slide .cart_Details .cartMenu .content i{
+    color: var(--white);
+    padding:1rem .2rem ;
+    background: rgb(251, 107, 107);
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+nav .container .rightBx .cart_slide .cart_Details .cartMenu .content i:hover{
+    background: rgb(214, 0, 0);
+}
+
+
+/* btn */
+nav .container .rightBx .cart_slide .btnBox{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+
+}
+nav .container .rightBx .cart_slide .btnBox a{
+    text-align: center;
+    padding: 1rem;
+    color: var(--white);
+    background: var(--yellow);
+}
+nav .container .rightBx .cart_slide .btnBox a:hover{
+    background: var(--yellowHover);
+}
+
+/* total */
+nav .container .rightBx .cart_slide .showTotalMenu{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    border-top: 1px solid black;
+    padding: 2rem 0;
+    font-size: 2rem;
+}
+
+
+/* -------------- Wishlist Slide Bar ------------------- */
+nav .container .rightBx .wishlist_slide{
+    padding: 2rem;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: 100dvh;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    transition: all .4s ease;
+}
+nav .container .rightBx .wishlist_slide.active{
+    right: 0;
+}
+nav .container .rightBx .wishlist_slide .wishlist_detail{
+    max-height: 500px;
+    overflow: scroll;
+    scrollbar-color: rgb(255, 255, 255,0.1);
+    scrollbar-width: thin;
+    margin-top: 3rem;
+
+}
+nav .container .rightBx .wishlist_slide .wishlist_detail .wishlistMenu{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+nav .container .rightBx .wishlist_slide .wishlist_detail .wishlistMenu .image img{
+    width: 50px;
+    height: 50px;
+}
+nav .container .rightBx .wishlist_slide .wishlist_detail .wishlistMenu .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
+nav .container .rightBx .wishlist_slide .wishlist_detail .wishlistMenu .content .menuName .name{
+    min-width: 10rem;
+}
+nav .container .rightBx .wishlist_slide .wishlist_detail .wishlistMenu .content .menuName .category{
+    font-size: 1.2rem;
+    background: var(--yellow);
+    display: inline-block;
+    padding: .2rem 1rem;
+    border-radius: 10px;
+    margin: .6rem 0;
+} 
+nav .container .rightBx .wishlist_slide .wishlist_detail .wishlistMenu .content .price{
+    font-size: 1.4rem;
+    min-width: 6rem;
+}
+
+
+nav .container .rightBx .wishlist_slide .wishlist_detail .wishlistMenu .content .cancel_wishlist{
+    font-size: 2rem;
+    color: white;
+    background: rgb(255, 102, 102);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: .5rem 0;
+}
+nav .container .rightBx .wishlist_slide .wishlist_detail .wishlistMenu .content .cancel_wishlist:hover{
+    background: red;
+}
+
+nav .container .rightBx .wishlist_slide .viewWishlistBtn{
+    background: var(--yellow);
+    padding: 1rem;
+    color: white;
+    border: 1px solid var(--yellow);
+    transition:all .2s ease;
+    display: block;
+    margin-top: 3rem;
+    text-align: center;
+}
+nav .container .rightBx .wishlist_slide .viewWishlistBtn:hover{
+    background: var(--yellowHover);
+}
+
+
+
+
+/* ------------- Media query ------------*/
+
+@media screen and (max-width:991px) {
+    /* logo */
+    nav .container .logo{
+        gap: .5rem;
+    }
+    nav .container .logo p{
+       font-size: 1.8rem;
+    }
+
+    nav .container .rightBx .navBx .navlink p{
+        padding:2rem 1rem ;
+    }
+
+    /* navabar and navlink */
+    nav .container .rightBx .navBx{
+        padding: 2rem;
+        display: block;
+        position: absolute;
+        top: 100%;
+        background: var(--blackBlue);
+        left: 0;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: all .4s ease;
+     } 
+     nav .container .rightBx .navBx.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+     }
+      nav .container .rightBx .navBx .navlink a, nav .container .rightBx .navBx .navlink:nth-child(5){
+        display: block;
+        border: 1px solid var(--white);
+        border-radius: 5px;
+        margin-bottom: 1rem;
+      }
+
+      /* -- dropdown -- */
+      nav .container .rightBx .navBx .navlink:nth-child(5){
+        overflow: hidden;
+      }
+    nav .container .rightBx .navBx .navlink p{
+        padding: 1.5rem ;
+    }
+    nav .container .rightBx .navBx .navlink p:hover{
+        color: var(--yellowHover);
+    }
+    nav .container .rightBx .navBx .navlink:hover .dropdownBox{
+        height: 165px;
+    }
+    nav .container .rightBx .navBx .navlink .dropdownBox{
+        height: 0;
+        position: relative !important;
+        top: 0;
+        transition: all .2s ease;
+        background: none;
+        padding: 0 2rem;
+    }
+    nav .container .rightBx .navBx .navlink .dropdownBox ul li a{
+        color: var(--white);
+        display: block;
+    }
+    nav .container .rightBx .navBx .navlink .dropdownBox ul li a:hover{
+        background:none;
+        color: var(--yellow);
+        cursor: pointer;
+    }
+
+    /* burger Bar */
+    nav .container .rightBx .burgerBar{
+        display: block;
+        border: 2px solid var(--yellow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 3rem;
+        padding: .4rem;
+    }
+    nav .container .rightBx .burgerBar .bx-menu{
+         display: block;
+    }
+    nav .container .rightBx .burgerBar.active .bx-menu{
+       display: none;
+    }
+    nav .container .rightBx .burgerBar .bx-x{
+          display: none;
+    }
+    nav .container .rightBx .burgerBar.active .bx-x{
+       display: block;
+    }
+    nav .container .rightBx .burgerBar:hover{
+        border-color: var(--yellowHover);
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

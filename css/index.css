@@ -1,0 +1,82 @@
+@import './color.css';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding:0 3rem;
+}
+
+/* *{border: 1px solid red;} */
+
+
+section.banner{
+    padding:0;
+}
+section{
+    padding: 10rem 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    background: #f4f4f4;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ------ ALL HEADER TEXT */
+.header {
+    text-align: center !important;
+    margin-bottom: 5rem;
+}
+.header span{
+font-size: 2rem;
+color: var(--yellow);
+font-family:'Courier New', Courier, monospace;
+font-weight: 600;
+}
+.header h2{
+    font-size: 4rem;
+    color: var(--blackBlue);
+    font-weight: 600;
+}
+
+/* --- Input Error Text */
+.errTx{
+    color: red;
+    margin-top: .5rem;
+}
+
+
+
+@media screen and (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width:480px){
+    html{
+        font-size: 50%;
+    }
+}
+
+
+
+

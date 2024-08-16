@@ -1,0 +1,277 @@
+.sectionBanner{
+    width: 100%;
+    height: 60dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+    background: url('/image/aboutImg1_3.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    text-align: center;
+}
+
+.sectionBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 23, 43,0.85);
+    z-index: -1;
+}
+.sectionBanner .content{
+    text-align: center;
+}
+.sectionBanner .content h2{
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.sectionBanner .content p{
+    text-align: center;
+    color: white;
+}
+.sectionBanner .content p span{
+    padding: .5rem;
+}
+.sectionBanner .content p span:nth-child(1),
+.sectionBanner .content p span:nth-child(3){
+    color: var(--yellow);
+}
+.sectionBanner .content p span:nth-child(2),
+.sectionBanner .content p span:nth-child(4){
+    color: #8d8c8c;
+}
+/* ------------------ ABOUT SECTION ----------------------------- */
+
+.about .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 6rem;
+}
+
+.about .container .leftBx{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+
+}
+.about .container .leftBx .image:nth-child(2){
+    padding-top: 20%;
+    padding-right:20%;
+}
+.about .container .leftBx .image:nth-child(3){
+    padding-left: 20%;
+    padding-bottom:20%;
+}
+
+.about .container .rightBx {
+    padding: 4rem 0;
+}
+.about .container .rightBx .content .miniTx{
+    font-size: 2.5rem;
+    color: var(--yellow);
+    font-weight: 600;
+    font-family:'Courier New', Courier, monospace;
+}
+
+
+.about .container .rightBx .content .headerTx{
+    font-size: 3.5rem;
+    color: var(--blackBlue);
+    font-weight: 800;
+    margin-bottom: 3rem;
+}
+
+.about .container .rightBx .content .description{
+    color: var(--gray2);
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+}
+
+
+.about .container .rightBx .content .restaurantDetail{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+
+.about .container .rightBx .content .restaurantDetail .experience,
+.about .container .rightBx .content .restaurantDetail .chef{
+    display: flex;
+    align-items: center;
+    border-left: 5px solid var(--yellow);
+}
+
+.about .container .rightBx .content .restaurantDetail .experience .num,
+.about .container .rightBx .content .restaurantDetail .chef .num{
+    color: var(--yellow);
+    font-size: 5rem;
+    font-weight: 600;
+    padding: 0 2rem;
+}
+
+.about .container .rightBx .content .restaurantDetail .experience .data p:nth-child(1),
+.about .container .rightBx .content .restaurantDetail .chef .data p:nth-child(1){
+    font-size: 1.5rem;
+    color: var(--gray2);
+    margin-bottom: .5rem;
+    font-weight: 500;
+}
+.about .container .rightBx .content .restaurantDetail .experience .data p:nth-child(2),
+.about .container .rightBx .content .restaurantDetail .chef .data p:nth-child(2){
+    font-size: 1.6rem;
+    color: var(--blackBlue);
+    font-weight: 700;
+}
+
+.about .container .rightBx .content .btn{
+    color: var(--white);
+    background: var(--yellow);
+    padding: 2rem 4rem;
+    display: inline-block;
+    transition: all .2s ease;
+}
+
+.about .container .rightBx .content .btn:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+
+/* ------------------ CHEF MEMBER SECTION ----------------------------- */
+.chef .container .chef_slide_box .chefBox {
+    text-align: center;
+    background: var(--white);
+    padding:2rem 2rem 0;
+    border-radius: 10px;
+    transition: all .2s ease;
+    transform: scale(.65);
+    opacity: .4;
+}
+
+.chef .container .chefBox.swiper-slide-prev{
+    transform: scale(.7);
+    opacity: .7;
+}
+.chef .container .chefBox.swiper-slide-next{
+    transform: scale(.7);
+    opacity: .7;
+}
+.chef .container .chefBox.swiper-slide-active{
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.chef .container .chef_slide_box .chefBox::after{
+    content: '';
+    transition: all .2s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: #f4f4f4;
+}
+
+.chef .container .chef_slide_box .chefBox:hover:after{
+    bottom: -40px;
+}
+.chef .container .chef_slide_box .chefBox .image{
+    margin:0 auto 2rem;
+    position: relative;
+    height: 20rem !important;
+    height: auto;
+}
+.chef .container .chef_slide_box .chefBox .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.chef .container .chef_slide_box .chefBox .content .position{
+    font-size: 1.2rem;
+    color: var(--white);
+    padding: .5rem 1.5rem;
+    background: var(--yellow);
+    display: inline-block;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.chef .container .chef_slide_box .chefBox .content .username{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.chef .container .chef_slide_box .chefBox  
+.follow_chef{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: all .2s ease;
+}
+
+.chef .container .chef_slide_box .chefBox  
+.follow_chef i{
+    font-size: 2rem;
+    color: var(--white);
+    background: var(--yellow);
+    padding: .8rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.chef .container .chef_slide_box .chefBox  
+.follow_chef i:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+
+
+
+/* ----------------- MEDIA QUERY -------------------------------- */
+
+@media screen and (max-width:991px){
+   /* about section */
+   .about .container{
+    gap: 4rem;
+}
+}
+
+@media screen and (max-width:768px){
+    /* About style */
+   .about .container{
+    grid-template-columns: 1fr;
+}
+}
+
+
+@media screen and (max-width:480px){
+    /* About Style */
+    .about .container .rightBx .content .restaurantDetail .experience .num,
+    .about .container .rightBx .content .restaurantDetail .chef .num{
+        font-size: 3rem;
+    }
+
+    .about .container .rightBx .content .restaurantDetail .experience .data p:nth-child(1),
+.about .container .rightBx .content .restaurantDetail .chef .data p:nth-child(1){
+    font-size: 1.1rem;
+}
+.about .container .rightBx .content .restaurantDetail .experience .data p:nth-child(2),
+.about .container .rightBx .content .restaurantDetail .chef .data p:nth-child(2){
+    font-size: 1.3rem;
+}
+
+}

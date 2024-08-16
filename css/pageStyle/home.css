@@ -1,0 +1,655 @@
+@import '../color.css';
+
+
+
+.banner .bannerSwiper .bannerSlide.slide1{
+    position: relative;
+    background: url('/image/banner1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.banner .bannerSwiper .bannerSlide.slide2{
+    position: relative;
+    background: url('/image/banner2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.banner .bannerSwiper .bannerSlide.slide3{
+    position: relative;
+    background: url('/image/banner3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.banner .bannerSwiper .bannerSlide{
+    position: relative;
+
+}
+.banner .bannerSwiper .bannerSlide::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 23, 43,0.8);
+    z-index: -1;
+}
+
+/* style swiper slide btn */
+.banner .swiper-button-next, 
+.banner .swiper-button-prev {
+    background: var(--yellow);
+    color: white;
+    padding: 3rem;
+    font-size: .1rem;
+}
+
+
+.banner .bannerSwiper .bannerSlide .container{
+    height: 100dvh;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 3rem;
+
+}
+.banner .bannerSwiper .bannerSlide .container .imageSpin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 60rem;
+}
+.banner .bannerSwiper .bannerSlide .container .imageSpin img{
+    width: 80%;
+    animation: rotation 100s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+.banner .bannerSwiper .bannerSlide .container .content{
+    max-width: 55rem;
+    width: 100%;
+    color: var(--white);
+}
+.banner .bannerSwiper .bannerSlide .container .content h1{
+    font-size: 6.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.banner .bannerSwiper .bannerSlide .container .content .description{
+    line-height: 2.7rem;
+}
+
+.banner .bannerSwiper .bannerSlide .container .content .btnBx{
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.banner .bannerSwiper .bannerSlide .container .content .btnBx .btn1{
+    background: var(--yellow);
+    border: 1px solid var(--yellow);
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    color: white;
+    transition:all .2s ease;
+}
+.banner .bannerSwiper .bannerSlide .container .content .btnBx .btn2{
+    background: none;
+    border: 1px solid var(--yellow);
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    color: white;
+    transition:all .2s ease;
+}
+
+.banner .bannerSwiper .bannerSlide .container .content .btnBx .btn1:hover{
+    background: var(--yellowHover);
+    border: 1px solid var(--yellowHover);
+    cursor: pointer;
+}
+.banner .bannerSwiper .bannerSlide .container .content .btnBx .btn2:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+
+
+/* --------------- SERVICE SECTION ----------------------------- */
+.service .container .serviceBox{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 2rem;
+}
+
+
+.service .container .serviceBox .serviceDetail{
+    background: white;
+    padding:3rem 2rem;   
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 25px 50px -12px;
+    transition: all .2s  ease;
+}
+.service .container .serviceBox .serviceDetail .icon{
+    text-align: center;
+    color: var(--yellow);
+    font-size: 6rem;
+}
+.service .container .serviceBox .serviceDetail .header{
+    font-size: 2rem;
+   margin: 1rem 0 1.5rem;
+    font-weight: 600;
+    color: var(--blackBlue);
+}
+.service .container .serviceBox .serviceDetail .detail{
+    color: var(--gray2);
+}
+
+.service .container .serviceBox .serviceDetail:hover{background: var(--yellow); color: white !important; transform: translateY(-10px);}
+.service .container .serviceBox .serviceDetail:hover .icon{ color: white !important;}
+.service .container .serviceBox .serviceDetail:hover .header{ color: white !important;}
+.service .container .serviceBox .serviceDetail:hover .detail{ color: white !important;}
+
+
+
+/* ------------------ ABOUT SECTION ----------------------------- */
+.about .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 6rem;
+}
+
+.about .container .leftBx{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+
+}
+.about .container .leftBx .image:nth-child(2){
+    padding-top: 20%;
+    padding-right:20%;
+}
+.about .container .leftBx .image:nth-child(3){
+    padding-left: 20%;
+    padding-bottom:20%;
+}
+
+.about .container .rightBx {
+    padding: 4rem 0;
+}
+.about .container .rightBx .content .miniTx{
+    font-size: 2.5rem;
+    color: var(--yellow);
+    font-weight: 600;
+    font-family:'Courier New', Courier, monospace;
+}
+
+
+.about .container .rightBx .content .headerTx{
+    font-size: 3.5rem;
+    color: var(--blackBlue);
+    font-weight: 800;
+    margin-bottom: 3rem;
+}
+
+.about .container .rightBx .content .description{
+    color: var(--gray2);
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+}
+
+
+.about .container .rightBx .content .restaurantDetail{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+
+.about .container .rightBx .content .restaurantDetail .experience,
+.about .container .rightBx .content .restaurantDetail .chef{
+    display: flex;
+    align-items: center;
+    border-left: 5px solid var(--yellow);
+}
+
+.about .container .rightBx .content .restaurantDetail .experience .num,
+.about .container .rightBx .content .restaurantDetail .chef .num{
+    color: var(--yellow);
+    font-size: 5rem;
+    font-weight: 600;
+    padding: 0 2rem;
+}
+
+.about .container .rightBx .content .restaurantDetail .experience .data p:nth-child(1),
+.about .container .rightBx .content .restaurantDetail .chef .data p:nth-child(1){
+    font-size: 1.5rem;
+    color: var(--gray2);
+    margin-bottom: .5rem;
+    font-weight: 500;
+}
+.about .container .rightBx .content .restaurantDetail .experience .data p:nth-child(2),
+.about .container .rightBx .content .restaurantDetail .chef .data p:nth-child(2){
+    font-size: 1.6rem;
+    color: var(--blackBlue);
+    font-weight: 700;
+}
+
+.about .container .rightBx .content .btn{
+    color: var(--white);
+    background: var(--yellow);
+    padding: 2rem 4rem;
+    display: inline-block;
+    transition: all .2s ease;
+}
+
+.about .container .rightBx .content .btn:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+
+
+/* ------------------ POPULAR MENU SECTION ----------------------------- */
+.menu .container{
+    text-align: center;
+}
+.menu .container .popularMenuBx .swiper-wrapper{
+    padding: 5rem 0 8rem;
+}
+.menu .container .popularMenuBx .menuBox{
+   text-align: center;
+   transform: scale(0.8);
+   transition: all .2s ease;
+   opacity: .6;
+}
+.menu .container .popularMenuBx .menuBox.swiper-slide-active{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.menu .container .popularMenuBx .swiper-pagination-bullet-active {
+    transform: scale(1.4);
+    background:var(--yellow);
+}
+
+.menu .container .popularMenuBx .menuBox .image{
+    margin: 0 auto 2rem;
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+}
+.menu .container .popularMenuBx .menuBox .image img{
+   width: 100%;
+   height: 100%;
+}
+
+.menu .container .popularMenuBx .menuBox .content .categoryMenu{
+    background: var(--yellow);
+    padding: .5rem 1rem;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    display: inline-block;
+}
+
+
+.menu .container .popularMenuBx .menuBox .content .nameMenu{
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.menu .container .popularMenuBx .menuBox .content .description{
+    padding: 0 3rem;
+      color: var(--gray2);
+      font-size: 1.6rem;
+}
+
+.menu .container .popularMenuBx .menuBox .content .priceMenu{
+    margin: 2rem 0;
+}
+
+.menu .container .popularMenuBx .menuBox .content .rateMenu i{
+    color: var(--yellow);
+}
+
+.menu .container .menuBtn{
+    margin: 3rem auto 0;
+    background: var(--yellow);
+    border: 1px solid var(--yellow);
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    color: white;
+    transition:all .2s ease;
+    cursor: pointer;
+}
+.menu .container .menuBtn:hover{
+    background: var(--yellowHover);
+}
+
+
+
+/* ------------------ DISCOUNT MEMBER SECTION ----------------------------- */
+.discountMember{
+    background: url('/image/memberSection.jpg');
+    background-size: cover;
+    background-position:  center;
+    position: relative;
+    z-index: 0;
+    padding: 4rem 2rem;
+}
+.discountMember::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0,0.7);
+    z-index: -1;
+}
+
+.discountMember .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.discountMember .container .content{
+    text-align: center;
+    padding: 0 2rem;
+color: white;
+}
+
+.discountMember .container .content h2{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.discountMember .container .content .member_btn{
+    text-align: center;
+    display: inline-block;
+    background: var(--yellow);
+    border: 1px solid var(--yellow);
+    padding: 1.5rem 3rem;
+    color: white;
+    transition:all .2s ease;
+}
+.discountMember .container .content .member_btn:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+
+
+/* ------------------ CHEF MEMBER SECTION ----------------------------- */
+.chef .container .chef_slide_box .chefBox {
+    text-align: center;
+    background: var(--white);
+    padding:2rem 2rem 0;
+    border-radius: 10px;
+    transition: all .2s ease;
+    transform: scale(.65);
+    opacity: .4;
+}
+
+.chef .container .chefBox.swiper-slide-prev{
+    transform: scale(.7);
+    opacity: .7;
+}
+.chef .container .chefBox.swiper-slide-next{
+    transform: scale(.7);
+    opacity: .7;
+}
+.chef .container .chefBox.swiper-slide-active{
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.chef .container .chef_slide_box .chefBox::after{
+    content: '';
+    transition: all .2s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: #f4f4f4;
+}
+
+.chef .container .chef_slide_box .chefBox:hover:after{
+    bottom: -40px;
+}
+.chef .container .chef_slide_box .chefBox .image{
+    margin:0 auto 2rem;
+    position: relative;
+    height: 20rem !important;
+    height: auto;
+}
+.chef .container .chef_slide_box .chefBox .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.chef .container .chef_slide_box .chefBox .content .position{
+    font-size: 1.2rem;
+    color: var(--white);
+    padding: .5rem 1.5rem;
+    background: var(--yellow);
+    display: inline-block;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.chef .container .chef_slide_box .chefBox .content .username{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.chef .container .chef_slide_box .chefBox  
+.follow_chef{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: all .2s ease;
+}
+
+.chef .container .chef_slide_box .chefBox  
+.follow_chef i{
+    font-size: 2rem;
+    color: var(--white);
+    background: var(--yellow);
+    padding: .8rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.chef .container .chef_slide_box .chefBox  
+.follow_chef i:hover{
+    background: var(--yellowHover);
+    cursor: pointer;
+}
+
+
+
+/* ------------------ TESTIMONIAL SECTION ----------------------------- */
+.testimonial{
+    padding: 3rem 0 15rem;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox{
+   padding: 2.5rem;
+   border: 1px solid rgba(183, 183, 183, 0.5);
+   border-radius: 5px;
+   background: white;
+   transform: scale(.8);
+   transition: all .3s ease;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox.swiper-slide-active{
+   border: 1px solid var(--yellow);
+   background: var(--yellow);
+   transform: scale(1);
+   color: white !important;
+   transition: all .2s ease;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox.swiper-slide-active .bxs-quote-left,
+.testimonial .container .testimonial_slide_box .testimonialBox.swiper-slide-active .user  .desc p,
+.testimonial .container .testimonial_slide_box .testimonialBox.swiper-slide-active .content .description_text{
+    color: white !important;
+}
+
+.testimonial .container .testimonial_slide_box .testimonialBox .bxs-quote-left{
+    font-size: 4.5rem;
+    color: var(--yellow);
+    margin-bottom: 2rem;
+}
+
+.testimonial .container .testimonial_slide_box .testimonialBox .content{
+    margin-bottom: 3rem;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox .content .description_text{
+    color: var(--gray2);
+    line-height: 2.4rem;
+}
+
+.testimonial .container .testimonial_slide_box .testimonialBox .user{
+    display: flex;
+    gap: 3rem;
+}
+
+
+.testimonial .container .testimonial_slide_box .testimonialBox .user .image img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox .user  .desc h3{
+    margin-bottom: .5rem;
+    font-size: 1.8rem;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox .user  .desc p{
+    color: var(--gray);
+}
+
+
+
+/* ----------------- MEDIA QUERY -------------------------------- */
+
+@media screen and (max-width:991px){
+    .banner .bannerSwiper .bannerSlide .container .content h1{
+        font-size: 6rem;
+    }
+
+   /* about section */
+   .about .container{
+    gap: 4rem;
+}
+
+/* popular menu section */
+.menu .container .popularMenuBx .menuBox .content .description{
+    padding: 0 1rem;
+}
+}
+
+
+
+
+@media screen and (max-width:768px){
+    .banner .bannerSwiper .bannerSlide .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .banner .bannerSwiper .bannerSlide .container .imageSpin{
+        display: none;
+    }
+    .banner .bannerSwiper .bannerSlide .container .content .btnBx{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* style swiper slide btn */
+.banner .swiper-button-next, 
+.banner .swiper-button-prev {
+    position: absolute;
+    top:94% !important;
+    bottom: 0%;
+    background: var(--yellow);
+    color: white;
+    padding: 3rem;
+    font-size: .1rem;
+}
+
+    /* Service Style */
+    .service .container .serviceBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    /* About style */
+   .about .container{
+    grid-template-columns: 1fr;
+}
+
+/* popular menu section */
+.menu .container .popularMenuBx .menuBox .content .description{
+    padding: 0 3rem;
+}
+
+}
+
+@media screen and (max-width:678px){
+    /* discount section */
+.discountMember .container .content h2{
+    font-size: 3rem;
+}
+
+}
+
+
+@media screen and (max-width:480px){
+    .banner .bannerSwiper .bannerSlide .container .content h1{
+        font-size: 5rem;
+    }
+
+    /* Service Style */
+    .service .container .serviceBox{
+        grid-template-columns: 1fr;
+        }
+
+    /* About Style */
+    .about .container .rightBx .content .restaurantDetail .experience .num,
+    .about .container .rightBx .content .restaurantDetail .chef .num{
+        font-size: 3rem;
+    }
+
+    .about .container .rightBx .content .restaurantDetail .experience .data p:nth-child(1),
+.about .container .rightBx .content .restaurantDetail .chef .data p:nth-child(1){
+    font-size: 1.1rem;
+}
+.about .container .rightBx .content .restaurantDetail .experience .data p:nth-child(2),
+.about .container .rightBx .content .restaurantDetail .chef .data p:nth-child(2){
+    font-size: 1.3rem;
+}
+
+/* Discount Section */
+.discountMember .container .content{
+    padding: 0;
+}
+}
+
+
+
+

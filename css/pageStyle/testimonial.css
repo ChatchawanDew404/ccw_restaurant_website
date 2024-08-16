@@ -1,0 +1,109 @@
+.sectionBanner{
+    width: 100%;
+    height: 60dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+    background: url('/image/aboutImg1_3.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    text-align: center;
+}
+
+.sectionBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 23, 43,0.85);
+    z-index: -1;
+}
+.sectionBanner .content{
+    text-align: center;
+}
+.sectionBanner .content h2{
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.sectionBanner .content p{
+    text-align: center;
+    color: white;
+}
+.sectionBanner .content p span{
+    padding: .5rem;
+}
+.sectionBanner .content p span:nth-child(1),
+.sectionBanner .content p span:nth-child(3){
+    color: var(--yellow);
+}
+.sectionBanner .content p span:nth-child(2),
+.sectionBanner .content p span:nth-child(4){
+    color: #8d8c8c;
+}
+
+
+
+/* ------------------ TESTIMONIAL SECTION ----------------------------- */
+.testimonial{
+    padding: 10rem 0 10rem;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox{
+   padding: 2.5rem;
+   border: 1px solid rgba(183, 183, 183, 0.5);
+   border-radius: 5px;
+   background: white;
+   transform: scale(.8);
+   transition: all .3s ease;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox.swiper-slide-active{
+   border: 1px solid var(--yellow);
+   background: var(--yellow);
+   transform: scale(1);
+   color: white !important;
+   transition: all .2s ease;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox.swiper-slide-active .bxs-quote-left,
+.testimonial .container .testimonial_slide_box .testimonialBox.swiper-slide-active .user  .desc p,
+.testimonial .container .testimonial_slide_box .testimonialBox.swiper-slide-active .content .description_text{
+    color: white !important;
+}
+
+.testimonial .container .testimonial_slide_box .testimonialBox .bxs-quote-left{
+    font-size: 4.5rem;
+    color: var(--yellow);
+    margin-bottom: 2rem;
+}
+
+.testimonial .container .testimonial_slide_box .testimonialBox .content{
+    margin-bottom: 3rem;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox .content .description_text{
+    color: var(--gray2);
+    line-height: 2.4rem;
+}
+
+.testimonial .container .testimonial_slide_box .testimonialBox .user{
+    display: flex;
+    gap: 3rem;
+}
+
+
+.testimonial .container .testimonial_slide_box .testimonialBox .user .image img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox .user  .desc h3{
+    margin-bottom: .5rem;
+    font-size: 1.8rem;
+}
+.testimonial .container .testimonial_slide_box .testimonialBox .user  .desc p{
+    color: var(--gray);
+}

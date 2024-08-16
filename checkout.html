@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="icon" href="image/logo.png"  type="image/x-icon">
+     <!-- swiper -->
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+   />
+     <!-- box icon import -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css -->
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navigationbar.css">
+     <link rel="stylesheet" href="css/footer.css">
+     <!-- checkout css -->
+      <link rel="stylesheet" href="css/pageStyle/checkout.css">
+</head>
+<body>
+    <!----  NAVIGATION BAR (navigationBar.js)---->
+ <nav></nav>
+
+
+
+<!--GENERAL BANNER SECTION-->
+<section class="sectionBanner">
+    <div class="container">
+     <div class="content">
+         <h2>CHECK OUT</h2>
+          <p><span>HOME</span>
+             <span>/</span>
+             <span>PAGES</span>
+             <span>/</span>
+             <span>CHECK OUT</span>
+         </p>
+     </div>
+    </div>
+   </section>
+
+<!-- ------------ CHECKOUT SECTION ------------>
+ <section class="checkout">
+  <div class="container">
+    <div class="header">
+      <span>Orders</span>
+      <h2>Your Order</h2>
+    </div>
+       <div class="loginRegisterQuestion">
+        <p>Returning Customer ?</p>
+        <a href="./login.html">Click here to login</a>
+       </div>
+       <div class="couponQuestion">
+        <p>Have a coupon ?</p>
+        <p>Click here to enter code</p>
+       </div>
+
+       <div class="orderCheckout">
+        <div class="leftBx">
+          <h3>Billing Details</h3>
+          <div class="inputBx">
+            <input type="text" placeholder="First Name" id="firstNameInput" disabled>
+            <p class="errTx"></p>
+          </div>
+          <div class="inputBx">
+            <input type="text" placeholder="Last Name"  id="LastNameInput" disabled>
+            <p class="errTx"></p>
+          </div>
+          <div class="inputBx">
+            <input type="text" placeholder="Email" id="EmailInput" disabled>
+            <p class="errTx"></p>
+          </div>
+          <div class="inputBx">
+            <input type="text" placeholder="Company Name(optional)" id="CompanyNameInput">
+            <p class="errTx"></p>
+          </div>
+          <div class="inputBx">
+            <input type="text" placeholder="Country / Region" id="ContryNameInput">
+            <p class="errTx"></p>
+          </div>
+          <div class="inputBx">
+            <input type="text" placeholder="Street Address" id="StreedAddressInput">
+            <p class="errTx"></p>
+          </div>
+          <div class="inputBx">
+            <input type="text" placeholder="Town / City" id="TownOrCityInput">
+            <p class="errTx"></p>
+          </div>
+          <div class="inputBx">
+            <input type="text" placeholder="State" id="StateInput">
+            <p class="errTx"></p>
+          </div>
+          <div class="inputBx">
+            <input type="text" placeholder="ZIP" id="ZipInput">
+            <p class="errTx"></p>
+          </div>
+          <div class="inputBx">
+            <input type="text" placeholder="Phone" id="PhoneInput" disabled>
+            <p class="errTx"></p>
+          </div>
+      
+          <div class="inputBx">
+            <h3>Additional Information</h3>
+            <textarea name="" id="" placeholder="Notes about your order, e.g. special note for delivery"></textarea>
+          </div>
+        </div>
+
+        <div class="rightBx">
+          <div class="showYourOrder">
+            <h3>Your Order</h3>
+            <div class="yourOrderBx">
+              <ul class="showAllMenuPrice">
+                <li><p><span class="manuName">Burger 1</span><span class="qty">x 1</span></p><span class="price">0.00$</span></li>
+                <li><p><span class="manuName">Burger 2</span><span class="qty">x 2</span></p><span class="price">0.00$</span></li>
+              </ul>
+
+              <ul class="showTotal">
+                <li><span>SubTotal</span> <span class="subTotalPrice">0.00$</span></li>
+                <li><span>Tax</span><span>7%</span></li>
+                <li><span>Total</span><span class="totalPrice">0.00$</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="paymentMethodBx">
+            <h3>Payment Method</h3>
+            <div class="paymentCtn">
+              <div class="paymentBx">
+                <div class="cardtx"><span><i class='bx bx-credit-card'></i> Credit Card</span> <span><input type="radio" id="credit" name="chooseCredit" value="creditCard" checked></span></div>
+                <p class="detail">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, error rerum accusamus commodi quidem delectus harum quia ipsum laborum excepturi aliquid repellendus enim repudiandae perspiciatis, illo tempore illum nemo odio.</p>
+              </div>
+  
+              <ul>
+                <li><span><i class='bx bxl-paypal' ></i>Paypal</span><span> <input type="radio" id="paypal" name="chooseCredit"></span></li>
+                <li><span><i class='bx bxl-google' ></i>Google Pay</span><span> <input type="radio" id="googlePay" name="chooseCredit"></span></li>
+                <li><span><i class='bx bxl-apple' ></i>Apple Pay</span><span> <input type="radio" id="applePay" name="chooseCredit"></span></li>
+                <li><span><i class='bx bxs-wallet-alt' ></i>Cash on Delivery</span><span> <input type="radio" id="cashOnDelivery" name="chooseCredit"></span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="alertDetail">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi accusamus explicabo quia officiis voluptates quisquam, obcaecati voluptatum odio, ratione repellendus saepe necessitatibus possimus deserunt asperiores earum hic id provident? Tenetur incidunt aperiam distinctio repellat ab? Voluptatibus adipisci sapiente libero?</p>
+          </div>
+          <button class="submitPayment">Place Order</button>
+        </div>
+       </div>
+  </div>
+ </section>
+
+
+  <!----- FOOTER SECTION (footer.js)---->
+  <footer>
+  </footer>
+
+ <!-- PRELOADER (preloader.js) -->
+ <section class="preloader">
+  <div class="content">
+      <div class="preloaderGif">
+          <img src="./image/imgSpinBanner1.png" alt="">
+      </div>
+  
+      <h3>Loading...</h3>
+  </div>
+ </section>
+
+
+<!-- import box icon -->
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<!-- import Swiper script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- import SweetAlert 2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <!--All script -->
+ <script src="./js/swiperScript/allSwiper.js"></script>
+ <script src="./js/preloader.js"></script>
+ <script src="./js/navigationBar.js"></script>
+ <script src="./js/pageScript/checkout.js"></script>
+ <script src="./js/footer.js"></script>
+</body>
+</html>

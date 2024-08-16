@@ -1,0 +1,60 @@
+{
+    "allChef": [
+        {
+            "id": "1",
+            "image": "../image/chef/chef1.png",
+            "firstname": "James",
+            "lastname": "Smith",
+            "position": "Head Chef"
+        },
+        {
+            "id": "2",
+            "image": "../image/chef/chef2.png",
+            "firstname": "Robert",
+            "lastname": "Johnson",
+            "position": "Sous Chef"
+        },
+        {
+            "id": "3",
+            "image": "../image/chef/chef3.png",
+            "firstname": "Michael",
+            "lastname": "Williams",
+            "position": "Pastry Chef"
+        },
+        {
+            "id": "4",
+            "image": "../image/chef/chef4.png",
+            "firstname": "David",
+            "lastname": "Brown",
+            "position": "Line Cook"
+        },
+        {
+            "id": "5",
+            "image": "../image/chef/chef5.png",
+            "firstname": "John",
+            "lastname": "Jones",
+            "position": "Grill Chef"
+        },
+        {
+            "id": "6",
+            "image": "../image/chef/chef6.png",
+            "firstname": "Emily",
+            "lastname": "Davis",
+            "position": "Sauce Chef"
+        },
+        {
+            "id": "7",
+            "image": "../image/chef/chef7.png",
+            "firstname": "Sophia",
+            "lastname": "Miller",
+            "position": "Prep Chef"
+        },
+        {
+            "id": "8",
+            "image": "../image/chef/chef8.png",
+            "firstname": "Olivia",
+            "lastname": "Wilson",
+            "position": "Vegetable Chef"
+        }
+    ]
+}

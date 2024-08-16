@@ -1,0 +1,113 @@
+.sectionBanner{
+    width: 100%;
+    height: 60dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+    background: url('/image/aboutImg1_3.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    text-align: center;
+}
+
+.sectionBanner::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 23, 43,0.85);
+    z-index: -1;
+}
+.sectionBanner .content{
+    text-align: center;
+}
+.sectionBanner .content h2{
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.sectionBanner .content p{
+    text-align: center;
+    color: white;
+}
+.sectionBanner .content p span{
+    padding: .5rem;
+}
+.sectionBanner .content p span:nth-child(1),
+.sectionBanner .content p span:nth-child(3){
+    color: var(--yellow);
+}
+.sectionBanner .content p span:nth-child(2),
+.sectionBanner .content p span:nth-child(4){
+    color: #8d8c8c;
+}
+
+
+/* -------------- WISHLIST TABLE ---------------------- */
+.wishlist_Box{
+    max-height: 60rem;
+    overflow-y: scroll;
+}
+.wishlist_Box #wishlistTable{
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+.wishlist_Box #wishlistTable td{
+    border: 1px solid #aaa;
+    padding: 1rem;
+    min-width: 10rem;
+}
+.wishlist_Box #wishlistTable tr th{
+  background: var(--blackBlue);
+  padding: 2rem;
+  color: white;
+  position: sticky !important;
+  top: 0;
+  left: 0;
+}
+
+.wishlist_Box #wishlistTable tr:nth-child(even){background-color: #fff;}
+
+.wishlist_Box #wishlistTable tr td .image img{
+    max-width: 6rem;
+    max-height: 6rem;
+}
+
+.wishlist_Box #wishlistTable tr td.categoryFood span{
+    padding: .5rem 1rem;
+    background: var(--yellow);
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+.wishlist_Box #wishlistTable tr td button.deleteWishlist{
+   background: red;
+   color: white;
+   border: none;
+   outline: none;
+   padding: 1rem;
+   font-size: 2rem;
+   border-radius: 5px;
+}
+
+.wishlist_Box #wishlistTable tr td button.deleteWishlist:hover{
+    background: rgb(154, 0, 0);
+    cursor: pointer;
+ }
+
+
+
+
+
+/* ------------- MEDIA QUERY ----------------- */
+@media screen and (max-width:576px){
+    .wishlist_Box{
+      font-size: 1.4rem;
+    }
+}
