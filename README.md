@@ -13,7 +13,7 @@ This project is suitable for beginners who want to learn the basics of website f
 This restaurant project is developed using only html css js. 
 
 
-## ✨There are 16 pages in total.
+## ✨There are a total of 16 pages in this project
 - home
 - about
 - service
