@@ -5,11 +5,13 @@
 This project is suitable for beginners who want to learn the basics of website functionality and internal data communication using fundamental HTML, CSS, and JavaScript.
 
 ### Getting Started
--copy or download Repository
--Open the project in folder.
+- copy or download Repository
+- Open the project in folder.
 - run website by Live server
 
+
 This restaurant project is developed using only html css js. 
+
 
 ### There are 16 pages in total.
 - home
@@ -29,7 +31,7 @@ This restaurant project is developed using only html css js.
 - login
 - member
 
-
+### All the systems in this project
 [menu]
 - Can be searched
 - Can choose category
@@ -70,7 +72,7 @@ This restaurant project is developed using only html css js.
 - show quantity food menu in wishlist
 
 
-(Data Storage)
+### Data Storage
 - Use localStorage to get Data 
 - User Data for get all user data after signup 
 - token for authentication before making a transaction
